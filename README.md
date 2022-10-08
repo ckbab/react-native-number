@@ -8,6 +8,8 @@ React Native component for render beautiful numbers.
 yarn add @ckbab/react-native-number
 ```
 
+This package depends on `react-native-svg` so you need to install it as well.
+
 ## Usage
 
 ```js

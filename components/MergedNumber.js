@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
   },
   container: {
     alignItems: "center",
+    alignSelf: "flex-start",
     borderColor: "#000",
     flexDirection: "row",
     overflow: "hidden",
