@@ -1,0 +1,51 @@
+{
+  "name": "@ckbab/react-native-number",
+  "version": "1.0.0",
+  "description": "React Native component for render beautiful numbers.",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier . --write && npx eslint . --fix"
+  },
+  "dependencies": {
+    "@ckbab/js-utils": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1",
+    "react-native": ">=0.64.3",
+    "react-native-svg": ">=12.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/eslint-parser": "^7.19.1",
+    "@ckbab/eslint-config": "^1.0.13",
+    "babel-preset-expo": "^9.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-hooks": "^0.4.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "prettier": "^2.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckbab/react-native-number.git"
+  },
+  "keywords": [
+    "number",
+    "digit",
+    "react native",
+    "svg"
+  ],
+  "author": "Marcus Christiansson <christiansson.marcus@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckbab/react-native-number/issues"
+  },
+  "homepage": "https://github.com/ckbab/react-native-number#readme"
+}
