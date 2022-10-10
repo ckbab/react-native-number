@@ -1,6 +1,6 @@
 {
   "name": "@ckbab/react-native-number",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Native component for render beautiful numbers.",
   "main": "index.js",
   "scripts": {

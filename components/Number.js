@@ -5,7 +5,7 @@ import MergedNumber from "./MergedNumber";
 import SeparatedNumber from "./SeparatedNumber";
 
 export default function Number({ color, size, style, type, value }) {
-  if (!value || isNaN(value)) {
+  if (value === undefined || value === null || isNaN(value)) {
     return null;
   }
 

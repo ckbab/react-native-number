@@ -25,7 +25,7 @@ import Number from "@ckbab/react-native-number";
 | Name    | Type                  | Default value |
 | ------- | --------------------- | ------------- |
 | `color` | `string`              | `#cc00ff`     |
-| `size`  | `number`              | 32            |
-| `style` | `StyleSheet`          | -             |
+| `size`  | `number`              | `32`          |
+| `style` | `StyleSheet`          | `{}`          |
 | `type`  | `merged`, `seperated` | `separated`   |
-| `value` | `number`              | -             |
+| `value` | `number`              | `null`        |
