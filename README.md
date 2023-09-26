@@ -20,6 +20,18 @@ import Number from "@ckbab/react-native-number";
 <Number color="#009900" size={48} type="separated" value={243} />
 ```
 
+You can also define default icon props using the `NumberProvider`:
+
+```js
+import { NumberProvider } from "@ckbab/react-native-number";
+
+<NumberProvider color="#ffcc00" size={48} type="merged">
+  /* Rest of your code */
+</NumberProvider>;
+```
+
+As shown above you can pass `color`, `size` and `type` as default props.
+
 ## Properties
 
 | Name    | Type                  | Default value |
