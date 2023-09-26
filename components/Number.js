@@ -5,13 +5,7 @@ import MergedNumber from "./MergedNumber";
 import { useNumberContext } from "./NumberContext";
 import SeparatedNumber from "./SeparatedNumber";
 
-export default function Number({
-  color: c,
-  size,
-  style,
-  type = "separated",
-  value,
-}) {
+export default function Number({ color: c, size, style, type, value }) {
   const context = useNumberContext();
 
   if (value === undefined || value === null || isNaN(value)) {
@@ -26,7 +20,9 @@ export default function Number({
     value,
   };
 
-  if (type === "merged") {
+  const selectedType = type || context?.type || "separated";
+
+  if (selectedType === "merged") {
     return <MergedNumber items={items} {...props} />;
   }
   return <SeparatedNumber items={items} {...props} />;
