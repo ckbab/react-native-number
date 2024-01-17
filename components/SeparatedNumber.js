@@ -5,7 +5,14 @@ import { Path, Svg } from "react-native-svg";
 
 import Digit from "./Digit";
 
-export default function SeparatedNumber({ color, items, size, style, value }) {
+export default function SeparatedNumber({
+  borderColor,
+  color,
+  items,
+  size,
+  style,
+  value,
+}) {
   const renderItem = (item, index) => {
     const number = parseInt(item);
     const marginLeft = index > 0 ? parseInt(size / 16) : 0;
@@ -24,7 +31,7 @@ export default function SeparatedNumber({ color, items, size, style, value }) {
 c-48.356-82.489-38.4-283.022,18.489-341.333c51.2-52.622,211.911-62.578,304.356-29.867
 C377.049,112.676,330.116,232.142,229.138,313.209z M405.493,412.764c-69.689,56.889-287.289,56.889-355.556,0c-69.689-56.889-62.578-300.089,0-364.089
 s292.978-64,355.556,0S475.182,355.876,405.493,412.764z"
-          stroke="#000"
+          stroke={borderColor}
           strokeWidth={40}
         />
         <Path
@@ -40,7 +47,7 @@ s292.978-64,355.556,0S475.182,355.876,405.493,412.764z"
           <Path
             d="M70 210h90v60H70z"
             fill="#fff"
-            stroke="#000"
+            stroke={borderColor}
             strokeWidth={20}
           />
         )}

@@ -5,7 +5,14 @@ import MergedNumber from "./MergedNumber";
 import { useNumberContext } from "./NumberContext";
 import SeparatedNumber from "./SeparatedNumber";
 
-export default function Number({ color: c, size, style, type, value }) {
+export default function Number({
+  borderColor: bColor,
+  color: iconColor,
+  size,
+  style,
+  type,
+  value,
+}) {
   const context = useNumberContext();
 
   if (value === undefined || value === null || isNaN(value)) {
@@ -14,7 +21,8 @@ export default function Number({ color: c, size, style, type, value }) {
 
   const items = value?.toString()?.replace(/\D+/g, "")?.split("");
   const props = {
-    color: c || context?.color || "#cc00ff",
+    borderColor: bColor || context?.borderColor || "#000",
+    color: iconColor || context?.color || "#cc00ff",
     size: size || context?.size || 32,
     style,
     value,
@@ -29,6 +37,7 @@ export default function Number({ color: c, size, style, type, value }) {
 }
 
 Number.propTypes = {
+  borderColor: PropTypes.string,
   color: PropTypes.string,
   size: PropTypes.number,
   style: PropTypes.any,

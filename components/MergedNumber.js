@@ -5,7 +5,14 @@ import { Path, Svg } from "react-native-svg";
 
 import Digit from "./Digit";
 
-export default function MergedNumber({ color, items, size, style, value }) {
+export default function MergedNumber({
+  borderColor,
+  color,
+  items,
+  size,
+  style,
+  value,
+}) {
   const renderItem = (item, index) => {
     const number = parseInt(item);
     const marginLeft = index > 0 ? -size / 2 : 0;
@@ -37,7 +44,13 @@ export default function MergedNumber({ color, items, size, style, value }) {
   const borderRadius = Math.max(4, size / 4);
 
   return (
-    <View style={[styles.container, { borderRadius, borderWidth }, style]}>
+    <View
+      style={[
+        styles.container,
+        { borderColor, borderRadius, borderWidth },
+        style,
+      ]}
+    >
       <View style={styles.bg}>
         <View style={[styles.side, { backgroundColor: color }]} />
         <View
@@ -70,7 +83,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     alignSelf: "flex-start",
-    borderColor: "#000",
     flexDirection: "row",
     overflow: "hidden",
   },
