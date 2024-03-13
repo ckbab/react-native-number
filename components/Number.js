@@ -1,3 +1,4 @@
+import { changeColor } from "@ckbab/js-utils";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -6,8 +7,8 @@ import { useNumberContext } from "./NumberContext";
 import SeparatedNumber from "./SeparatedNumber";
 
 export default function Number({
-  borderColor: bColor,
-  color: iconColor,
+  borderColor,
+  color,
   size,
   style,
   type,
@@ -19,10 +20,15 @@ export default function Number({
     return null;
   }
 
+  const iconColor = color || context?.color || "#cc00ff";
+
   const items = value?.toString()?.replace(/\D+/g, "")?.split("");
   const props = {
-    borderColor: bColor || context?.borderColor || "#000",
-    color: iconColor || context?.color || "#cc00ff",
+    borderColor:
+      borderColor ||
+      context?.borderColor ||
+      changeColor(iconColor, "#000", 0.6),
+    color: iconColor,
     size: size || context?.size || 32,
     style,
     value,
